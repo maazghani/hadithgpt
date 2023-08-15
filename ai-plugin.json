@@ -1,0 +1,32 @@
+{
+  "name": "Sahih AI Plugin",
+  "version": "1.0.0",
+  "entrypoints": {
+    "http": {
+      "path": "/api/query",
+      "method": "post",
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "/openapi.yaml#/components/schemas/QueryRequest"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "/openapi.yaml#/components/schemas/QueryResponse"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
